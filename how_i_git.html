@@ -171,6 +171,8 @@ pre code {
 <ul>
 <li><a href="#aquiring-a-repository">Aquiring a repository</a></li>
 <li><a href="#editing-files">Editing files</a></li>
+<li><a href="#remotes">Remotes</a></li>
+<li><a href="#links">Links</a></li>
 </ul>
 </div>
 
@@ -189,7 +191,8 @@ pre code {
 <p>This will create a directory called <code>R_misc</code> which contains the repo.</p>
 <pre class="bash"><code>git status</code></pre>
 <pre><code>## On branch master
-## Your branch is up to date with &#39;origin/master&#39;.
+## Your branch is ahead of &#39;origin/master&#39; by 1 commit.
+##   (use &quot;git push&quot; to publish your local commits)
 ## 
 ## Changes not staged for commit:
 ##   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
@@ -207,13 +210,20 @@ pre code {
 <pre class="bash"><code>git add how_i_git.*
 git commit -m &quot;made important changes to how_i_git&quot;
 git status</code></pre>
-<pre><code>## [master 72dc3e4] made important changes to how_i_git
-##  2 files changed, 83 insertions(+), 9 deletions(-)
+<pre><code>## [master 845377c] made important changes to how_i_git
+##  2 files changed, 23 insertions(+), 1 deletion(-)
 ## On branch master
-## Your branch is ahead of &#39;origin/master&#39; by 1 commit.
+## Your branch is ahead of &#39;origin/master&#39; by 2 commits.
 ##   (use &quot;git push&quot; to publish your local commits)
 ## 
 ## nothing to commit, working tree clean</code></pre>
+</div>
+<div id="remotes" class="section level2">
+<h2>Remotes</h2>
+</div>
+<div id="links" class="section level2">
+<h2>Links</h2>
+<p><a href="https://git-scm.com/book/en/v2">git Book</a>, note translations to other spoken languages.</p>
 </div>
 
 
