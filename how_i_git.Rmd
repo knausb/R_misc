@@ -71,6 +71,14 @@ git status
 ## Remotes
 
 
+When working with remotes, such as GitHub, you'll want to update your changes there as well.
+This will allow you to share your code with others, and allow others to contribute to your code.
+We'll accomplish this by pushing our changes to the remote.
+But first we need to pull from the remote.
+This will update our copy with any changes that have been made to the remote since we last updated our version.
+This is important here because sometimes this requires a manual curation step by a human.
+We can then push our changes to incorporate them into the remote.
+
 
 ```
 git pull origin master
