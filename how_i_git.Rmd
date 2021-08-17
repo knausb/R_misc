@@ -1,6 +1,8 @@
 ---
 title: "how i git"
-output: html_document
+output: 
+  html_document:
+    toc: true
 editor_options: 
   chunk_output_type: console
 ---
@@ -9,19 +11,63 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-How I use git.
+
+## Aquiring a repository
 
 
+When I see a repository on GitHub that I'm interested in I'll do one of two things.
+Typically I'll just clone it and use their code.
+If I think I'd like to contribute, I'll fork it and then clone my fork.
+I think the important difference is that I can make changes to my fork but can't if I just clone someone else's repository.
+More information can be found at [The difference between forking and cloning a repository](https://github.community/t/the-difference-between-forking-and-cloning-a-repository/10189).
 
 
-```{r, out.width="80%", fig.cap="A nice image."}
+Once I've decided I'd like to clone a GitHub repository I look for a button that allows me to copy the ssh information.
+These days there is a 'Code' button with a dropdown menu.
+
+
+```{r, out.width="80%", fig.cap="**Figure X.** Example of clone information.", prompt=TRUE, echo=FALSE}
+options(prompt = 'R> ')
 knitr::include_graphics("github_clone.png")
 ```
 
 
+Once copied to the clipboard I can use the following to clone the repository to a local volume.
+
+
 ```
-git clone git@github.com:knausb/R_misc.git
+bash$ git clone git@github.com:knausb/R_misc.git
 ```
+
+
+This will create a directory called ```R_misc``` which contains the repo.
+
+
+```{bash}
+git status
+```
+
+
+Here it tells me that I'm on the branch named 'master' (note that newer instances use 'main' as the default branch now).
+It also tells me if I've modified any files that I need to commit.
+It also gives me hints on commands that it thinks might help me.
+
+
+## Editing files
+
+
+Text files can be created and deleted with your favorite text editor.
+Once editing is complete you can check the repository again with `git status`.
+We'll then want to add them and then commit them with a message describing the changes.
+
+
+```{bash}
+git add how_i_git.*
+git commit -m "made important changes to how_i_git"
+git status
+```
+
+
 
 
 
