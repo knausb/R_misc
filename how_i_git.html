@@ -203,7 +203,17 @@ pre code {
 </div>
 <div id="editing-files" class="section level2">
 <h2>Editing files</h2>
-<p>Text files can be created and deleted with your favorite text editor. Once editing is complete you can check the repository again with <code>git status</code>.</p>
+<p>Text files can be created and deleted with your favorite text editor. Once editing is complete you can check the repository again with <code>git status</code>. We’ll then want to add them and then commit them with a message describing the changes.</p>
+<pre class="bash"><code>git add how_i_git.*
+git commit -m &quot;made important changes to how_i_git&quot;
+git status</code></pre>
+<pre><code>## [master 72dc3e4] made important changes to how_i_git
+##  2 files changed, 83 insertions(+), 9 deletions(-)
+## On branch master
+## Your branch is ahead of &#39;origin/master&#39; by 1 commit.
+##   (use &quot;git push&quot; to publish your local commits)
+## 
+## nothing to commit, working tree clean</code></pre>
 </div>
 
 

@@ -68,6 +68,18 @@ git status
 ```
 
 
+## Remotes
+
+
+
+
+
+## Links
+
+
+[git Book](https://git-scm.com/book/en/v2), note translations to other spoken languages.
+
+
 
 
 
