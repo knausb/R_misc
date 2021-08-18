@@ -191,17 +191,9 @@ pre code {
 <p>This will create a directory called <code>R_misc</code> which contains the repo.</p>
 <pre class="bash"><code>git status</code></pre>
 <pre><code>## On branch master
-## Your branch is ahead of &#39;origin/master&#39; by 5 commits.
-##   (use &quot;git push&quot; to publish your local commits)
+## Your branch is up to date with &#39;origin/master&#39;.
 ## 
-## Changes not staged for commit:
-##   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
-##   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
-## 
-##  modified:   how_i_git.Rmd
-##  modified:   how_i_git.html
-## 
-## no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</code></pre>
+## nothing to commit, working tree clean</code></pre>
 <p>Here it tells me that I’m on the branch named ‘master’ (note that newer instances use ‘main’ as the default branch now). It also tells me if I’ve modified any files that I need to commit. It also gives me hints on commands that it thinks might help me.</p>
 </div>
 <div id="editing-files" class="section level2">
@@ -210,11 +202,12 @@ pre code {
 <pre class="bash"><code>git add how_i_git.*
 git commit -m &quot;made important changes to how_i_git&quot;
 git status</code></pre>
-<pre><code>## [master eec5d8a] made important changes to how_i_git
-##  2 files changed, 15 insertions(+), 4 deletions(-)
+<pre><code>## On branch master
+## Your branch is up to date with &#39;origin/master&#39;.
+## 
+## nothing to commit, working tree clean
 ## On branch master
-## Your branch is ahead of &#39;origin/master&#39; by 6 commits.
-##   (use &quot;git push&quot; to publish your local commits)
+## Your branch is up to date with &#39;origin/master&#39;.
 ## 
 ## nothing to commit, working tree clean</code></pre>
 </div>
