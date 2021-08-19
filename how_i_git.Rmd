@@ -85,6 +85,41 @@ git pull origin master
 git push origin master
 ```
 
+## Branches
+
+
+## Working with R packages
+
+
+```
+
+
+devtools::test()
+
+# RStudio 'check' button
+devtools::check(document = FALSE)
+devtools::check(document = TRUE)
+
+roxygen2::roxygenise()
+roxygen2::roxygenise(clean = TRUE)
+
+# RStudio 'install and restart'
+R CMD INSTALL --no-multiarch --with-keep.source GAPIT3documentation
+
+# rm man/*
+# rm Meta/*
+
+```
+
+
+```
+R CMD build
+R CMD check
+R CMD check --as-cran
+
+```
+
+
 
 
 ## Links
