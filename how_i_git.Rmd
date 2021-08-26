@@ -88,6 +88,17 @@ git push origin master
 ## Branches
 
 
+```
+git branch -a
+
+$ git checkout -b iss53
+Switched to a new branch "iss53"
+
+
+```
+
+
+
 ## Working with R packages
 
 

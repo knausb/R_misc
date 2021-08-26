@@ -172,6 +172,8 @@ pre code {
 <li><a href="#aquiring-a-repository">Aquiring a repository</a></li>
 <li><a href="#editing-files">Editing files</a></li>
 <li><a href="#remotes">Remotes</a></li>
+<li><a href="#branches">Branches</a></li>
+<li><a href="#working-with-r-packages">Working with R packages</a></li>
 <li><a href="#links">Links</a></li>
 </ul>
 </div>
@@ -216,6 +218,33 @@ git status</code></pre>
 <p>When working with remotes, such as GitHub, you’ll want to update your changes there as well. This will allow you to share your code with others, and allow others to contribute to your code. We’ll accomplish this by pushing our changes to the remote. But first we need to pull from the remote. This will update our copy with any changes that have been made to the remote since we last updated our version. This is important here because sometimes this requires a manual curation step by a human. We can then push our changes to incorporate them into the remote.</p>
 <pre><code>git pull origin master
 git push origin master</code></pre>
+</div>
+<div id="branches" class="section level2">
+<h2>Branches</h2>
+</div>
+<div id="working-with-r-packages" class="section level2">
+<h2>Working with R packages</h2>
+<pre><code>
+
+devtools::test()
+
+# RStudio &#39;check&#39; button
+devtools::check(document = FALSE)
+devtools::check(document = TRUE)
+
+roxygen2::roxygenise()
+roxygen2::roxygenise(clean = TRUE)
+
+# RStudio &#39;install and restart&#39;
+R CMD INSTALL --no-multiarch --with-keep.source GAPIT3documentation
+
+# rm man/*
+# rm Meta/*
+</code></pre>
+<pre><code>R CMD build
+R CMD check
+R CMD check --as-cran
+</code></pre>
 </div>
 <div id="links" class="section level2">
 <h2>Links</h2>
