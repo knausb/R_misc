@@ -53,6 +53,14 @@ It also tells me if I've modified any files that I need to commit.
 It also gives me hints on commands that it thinks might help me.
 
 
+## Forking a repository
+
+
+```{r, out.width="80%", fig.cap="**Figure X.** Example of fork information.", prompt=TRUE, echo=FALSE}
+knitr::include_graphics("github_fork.png")
+```
+
+
 ## Editing files
 
 
