@@ -54,6 +54,7 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 ```
 
+
 Here it tells me that I'm on the branch named 'main' (note that older repositories may use 'master' as the default branch).
 It also tells me if I've modified any files that I need to commit.
 It also gives me hints on commands that it thinks might help me.
@@ -79,10 +80,17 @@ Once editing is complete you can check the repository again with `git status`.
 We'll then want to add them and then commit them with a message describing the changes.
 
 
-```{bash}
-git add how_i_git.*
-git commit -m "made important changes to how_i_git"
-git status
+```
+bash$ git add how_i_git.*
+bash$ git commit -m "made important changes to how_i_git"
+bash$ git status
+```
+
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
 ```
 
 
@@ -99,56 +107,46 @@ We can then push our changes to incorporate them into the remote.
 
 
 ```
-git pull origin master
-git push origin master
+bash$ git pull origin main
+bash$ git push origin main
 ```
+
+More information on working with remotes can be found at the [git documentation](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches).
+
 
 ## Branches
 
 
-```
-git branch -a
+Branches are an important concept in git, but they also add complexity.
+Branches are how git manages different versions of the project.
+For example, if you would like to propose changes to a project you can create a branch to work on.
+Changes to this branch will not affect the main branch, so you do not need to worry about breaking things.
+If you manage to avoid breaking things, and instead fix things, you can merge that branch into your main branch, or some other branch.
 
-$ git checkout -b iss53
+
+We can query what branches exist as follows.
+
+
+```
+bash$ git branch -a
+```
+
+```
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+```
+
+
+We can
+
+
+```
+bash$ git checkout -b iss53
 Switched to a new branch "iss53"
-
-
 ```
 
-
-
-## Working with R packages
-
-
-```
-
-
-devtools::test()
-
-# RStudio 'check' button
-devtools::check(document = FALSE)
-devtools::check(document = TRUE)
-
-roxygen2::roxygenise()
-roxygen2::roxygenise(clean = TRUE)
-
-# RStudio 'install and restart'
-R CMD INSTALL --no-multiarch --with-keep.source GAPIT3documentation
-
-# rm man/*
-# rm Meta/*
-
-```
-
-
-```
-R CMD build
-R CMD check
-R CMD check --as-cran
-
-```
-
-
+Merge pull request to a different branch than default [SO link](https://stackoverflow.com/a/38985999).
 
 
 ## Links

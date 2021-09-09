@@ -174,7 +174,6 @@ pre code {
 <li><a href="#editing-files">Editing files</a></li>
 <li><a href="#remotes">Remotes</a></li>
 <li><a href="#branches">Branches</a></li>
-<li><a href="#working-with-r-packages">Working with R packages</a></li>
 <li><a href="#links">Links</a></li>
 </ul>
 </div>
@@ -192,7 +191,7 @@ pre code {
 <p>Once copied to the clipboard I can use the following to clone the repository to a local volume.</p>
 <pre><code>bash$ git clone git@github.com:knausb/R_misc.git</code></pre>
 <p>This will create a directory called <code>R_misc</code> which contains the repo.</p>
-<pre><code>git status</code></pre>
+<pre><code>bash$ git status</code></pre>
 <pre><code>On branch main
 Your branch is up to date with &#39;origin/main&#39;.
 
@@ -212,55 +211,33 @@ nothing to commit, working tree clean</code></pre>
 <div id="editing-files" class="section level2">
 <h2>Editing files</h2>
 <p>Text files can be created and deleted with your favorite text editor. Once editing is complete you can check the repository again with <code>git status</code>. We’ll then want to add them and then commit them with a message describing the changes.</p>
-<pre class="bash"><code>git add how_i_git.*
-git commit -m &quot;made important changes to how_i_git&quot;
-git status</code></pre>
-<pre><code>## [master d8378c9] made important changes to how_i_git
-##  1 file changed, 8 insertions(+), 2 deletions(-)
-## On branch master
-## Your branch is ahead of &#39;origin/master&#39; by 1 commit.
-##   (use &quot;git push&quot; to publish your local commits)
-## 
-## nothing to commit, working tree clean</code></pre>
+<pre><code>bash$ git add how_i_git.*
+bash$ git commit -m &quot;made important changes to how_i_git&quot;
+bash$ git status</code></pre>
+<pre><code>On branch main
+Your branch is up to date with &#39;origin/main&#39;.
+
+nothing to commit, working tree clean</code></pre>
 </div>
 <div id="remotes" class="section level2">
 <h2>Remotes</h2>
 <p>When working with remotes, such as GitHub, you’ll want to update your changes there as well. This will allow you to share your code with others, and allow others to contribute to your code. We’ll accomplish this by pushing our changes to the remote. But first we need to pull from the remote. This will update our copy with any changes that have been made to the remote since we last updated our version. This is important here because sometimes this requires a manual curation step by a human. We can then push our changes to incorporate them into the remote.</p>
-<pre><code>git pull origin master
-git push origin master</code></pre>
+<pre><code>bash$ git pull origin main
+bash$ git push origin main</code></pre>
+<p>More information on working with remotes can be found at the <a href="https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches">git documentation</a>.</p>
 </div>
 <div id="branches" class="section level2">
 <h2>Branches</h2>
-<pre><code>git branch -a
-
-$ git checkout -b iss53
-Switched to a new branch &quot;iss53&quot;
-
-</code></pre>
-</div>
-<div id="working-with-r-packages" class="section level2">
-<h2>Working with R packages</h2>
-<pre><code>
-
-devtools::test()
-
-# RStudio &#39;check&#39; button
-devtools::check(document = FALSE)
-devtools::check(document = TRUE)
-
-roxygen2::roxygenise()
-roxygen2::roxygenise(clean = TRUE)
-
-# RStudio &#39;install and restart&#39;
-R CMD INSTALL --no-multiarch --with-keep.source GAPIT3documentation
-
-# rm man/*
-# rm Meta/*
-</code></pre>
-<pre><code>R CMD build
-R CMD check
-R CMD check --as-cran
-</code></pre>
+<p>Branches are an important concept in git, but they also add complexity. Branches are how git manages different versions of the project. For example, if you would like to propose changes to a project you can create a branch to work on. Changes to this branch will not affect the main branch, so you do not need to worry about breaking things. If you manage to avoid breaking things, and instead fix things, you can merge that branch into your main branch, or some other branch.</p>
+<p>We can query what branches exist as follows.</p>
+<pre><code>bash$ git branch -a</code></pre>
+<pre><code>* master
+  remotes/origin/HEAD -&gt; origin/master
+  remotes/origin/master</code></pre>
+<p>We can</p>
+<pre><code>bash$ git checkout -b iss53
+Switched to a new branch &quot;iss53&quot;</code></pre>
+<p>Merge pull request to a different branch than default <a href="https://stackoverflow.com/a/38985999">SO link</a>.</p>
 </div>
 <div id="links" class="section level2">
 <h2>Links</h2>
