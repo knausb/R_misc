@@ -56,6 +56,10 @@ It also gives me hints on commands that it thinks might help me.
 ## Forking a repository
 
 
+If you clone a repository you can make changes to your local clone, but you can't push back to the repository if it is not yours.
+In order to fork the GitHub repository to your account you can click on the fork button for the repository and then clone your repository to crearte a local copy.
+
+
 ```{r, out.width="80%", fig.cap="**Figure X.** Example of fork information.", prompt=TRUE, echo=FALSE}
 knitr::include_graphics("github_fork.png")
 ```
