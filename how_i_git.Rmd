@@ -43,12 +43,18 @@ bash$ git clone git@github.com:knausb/R_misc.git
 This will create a directory called ```R_misc``` which contains the repo.
 
 
-```{bash}
+```
 git status
 ```
 
+```
+On branch main
+Your branch is up to date with 'origin/main'.
 
-Here it tells me that I'm on the branch named 'master' (note that newer instances use 'main' as the default branch now).
+nothing to commit, working tree clean
+```
+
+Here it tells me that I'm on the branch named 'main' (note that older repositories may use 'master' as the default branch).
 It also tells me if I've modified any files that I need to commit.
 It also gives me hints on commands that it thinks might help me.
 
