@@ -174,6 +174,7 @@ pre code {
 <li><a href="#editing-files">Editing files</a></li>
 <li><a href="#remotes">Remotes</a></li>
 <li><a href="#branches">Branches</a></li>
+<li><a href="#pull-requests">Pull requests</a></li>
 <li><a href="#links">Links</a></li>
 </ul>
 </div>
@@ -234,10 +235,23 @@ bash$ git push origin main</code></pre>
 <pre><code>* master
   remotes/origin/HEAD -&gt; origin/master
   remotes/origin/master</code></pre>
-<p>We can</p>
-<pre><code>bash$ git checkout -b iss53
-Switched to a new branch &quot;iss53&quot;</code></pre>
-<p>Merge pull request to a different branch than default <a href="https://stackoverflow.com/a/38985999">SO link</a>.</p>
+<p>If we would like to create a new branch, so that we can attempt to address a new issue, we can create a new branch and switch to it as follows.</p>
+<pre><code>bash$ git checkout -b brnc2</code></pre>
+<pre><code>Switched to a new branch &quot;brnc2&quot;</code></pre>
+<p>If the branch we wish to switch to already exists, we can change to it as follows.</p>
+<pre><code>bash$ git checkout brnc2</code></pre>
+<p>Once we have checked out this branch we can edit files like any other files we would edit. We can also <code>add</code> and <code>commit</code> to this branch as we did above. We can also <code>push</code> and <code>pull</code> to a remote, as above, but we need to accommodate the different branch.</p>
+<pre><code>bash$ git pull origin brnc2
+bash$ git push origin brnc2</code></pre>
+<p>When you feel you have arrived at a solution you can merge it back to the main branch as follows.</p>
+<pre><code>bash$ git checkout main
+bash$ merge brnc2</code></pre>
+<p>If you know what is on the respective branches, this is fine. If it’s been a while and you do not remember the details of a branch, or someone else provides a branch, you’ll want to compare the branches. Finding differences among text files is typically done with <code>diff</code>, how to accomplish this in the context of git is explained at <a href="https://stackoverflow.com/questions/20808892/git-diff-between-current-branch-and-master-but-not-including-unmerged-master-com">this SO link</a>. Many of us use a graphical diff client, such as <a href="https://meldmerge.org/">meld</a>. An explanation on how to use meld with git can be found at <a href="https://stackoverflow.com/questions/2006032/view-differences-of-branches-with-meld">this SO link</a>.</p>
+</div>
+<div id="pull-requests" class="section level2">
+<h2>Pull requests</h2>
+<p>A GitHub pull request allows you to propose changes on a branch that you’ve worked on and it allows you to include messages to describe and discuss the proposal. It also allows you to propose changes to a repository where you have no permissions (i.e., someone else’s repository). Pull requests are implemented through GitHub’s web based interface, which should provide guidance as you make decisions. More information on GitHub pull requests can be found at their documentation: <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">GitHub pull requests</a></p>
+<p>The default is for GitHub to merge pull requests into the default branch (main, master). We can optionally merge into any other branch (e.g., <code>devel</code>) as well. Information on how to merge a pull request to a different branch than default can be found at <a href="https://stackoverflow.com/a/38985999">this SO link</a>.</p>
 </div>
 <div id="links" class="section level2">
 <h2>Links</h2>

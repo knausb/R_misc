@@ -138,15 +138,64 @@ bash$ git branch -a
 ```
 
 
-We can
+If we would like to create a new branch, so that we can attempt to address a new issue, we can create a new branch and switch to it as follows.
 
 
 ```
-bash$ git checkout -b iss53
-Switched to a new branch "iss53"
+bash$ git checkout -b brnc2
 ```
 
-Merge pull request to a different branch than default [SO link](https://stackoverflow.com/a/38985999).
+```
+Switched to a new branch "brnc2"
+```
+
+
+If the branch we wish to switch to already exists, we can change to it as follows.
+
+
+```
+bash$ git checkout brnc2
+```
+
+
+Once we have checked out this branch we can edit files like any other files we would edit.
+We can also ```add``` and ```commit``` to this branch as we did above.
+We can also `push` and `pull` to a remote, as above, but we need to accommodate the different branch.
+
+
+```
+bash$ git pull origin brnc2
+bash$ git push origin brnc2
+```
+
+
+When you feel you have arrived at a solution you can merge it back to the main branch as follows.
+
+
+```
+bash$ git checkout main
+bash$ merge brnc2
+```
+
+
+If you know what is on the respective branches, this is fine.
+If it's been a while and you do not remember the details of a branch, or someone else provides a branch, you'll want to compare the branches.
+Finding differences among text files is typically done with `diff`, how to accomplish this in the context of git is explained at [this SO link](https://stackoverflow.com/questions/20808892/git-diff-between-current-branch-and-master-but-not-including-unmerged-master-com).
+Many of us use a graphical diff client, such as [meld](https://meldmerge.org/).
+An explanation on how to use meld with git can be found at [this SO link](https://stackoverflow.com/questions/2006032/view-differences-of-branches-with-meld).
+
+
+## Pull requests
+
+
+A GitHub pull request allows you to propose changes on a branch that you've worked on and it allows you to include messages to describe and discuss the proposal.
+It also allows you to propose changes to a repository where you have no permissions (i.e., someone else's repository).
+Pull requests are implemented through GitHub's web based interface, which should provide guidance as you make decisions.
+More information on GitHub pull requests can be found at their documentation: [GitHub pull requests](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+
+The default is for GitHub to merge pull requests into the default branch (main, master).
+We can optionally merge into any other branch (e.g., `devel`) as well.
+Information on how to merge a pull request to a different branch than default can be found at [this SO link](https://stackoverflow.com/a/38985999).
 
 
 ## Links
