@@ -26,7 +26,7 @@ Once I've decided I'd like to clone a GitHub repository I look for a button that
 These days there is a 'Code' button with a dropdown menu.
 
 
-```{r, out.width="80%", fig.cap="**Figure X.** Example of clone information.", prompt=TRUE, echo=FALSE}
+```{r, out.width="80%", fig.cap="**Figure X.** Example of the clone menu at a GitHub repository.", prompt=TRUE, echo=FALSE}
 options(prompt = 'R> ')
 knitr::include_graphics("github_clone.png")
 ```
@@ -67,7 +67,7 @@ If you clone a repository you can make changes to your local clone, but you can'
 In order to fork the GitHub repository to your account you can click on the fork button for the repository and then clone your repository to crearte a local copy.
 
 
-```{r, out.width="80%", fig.cap="**Figure X.** Example of fork information.", prompt=TRUE, echo=FALSE}
+```{r, out.width="80%", fig.cap="**Figure X.** Example of fork information at a GitHub repository.", prompt=TRUE, echo=FALSE}
 knitr::include_graphics("github_fork.png")
 ```
 
